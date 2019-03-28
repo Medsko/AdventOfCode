@@ -1,0 +1,17 @@
+		int i = 0;
+		while (i < hashKnot.length()) {
+			
+			String hexNumber = hashKnot.substring(i, i + 2);
+			int hexToDecimal = Integer.parseInt(hexNumber, 16);
+			String binary = Integer.toBinaryString(hexToDecimal);
+			
+			while (binary.length() < 4)
+				binary = "0" + binary;
+			
+			binaryString += binary;
+			// Increment by two, so next double digit hex will be selected next round.
+			i += 2;
+		}
+10100000110000100000000101110000
+1010000011000010000000010111
+101000001100001000011110000
